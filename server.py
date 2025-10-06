@@ -196,4 +196,4 @@ if __name__ == "__main__":
         print(f"🔧 SMTP Server: {os.environ.get('SMTP_SERVER', 'smtp.gmail.com')}:{os.environ.get('SMTP_PORT', '587')}")
         print(f"📬 Emails will be sent to: {ADMIN_EMAIL}")
     
-    app.run(host='0.0.0.0', port=port, debug=False)
+    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)), debug=False)
